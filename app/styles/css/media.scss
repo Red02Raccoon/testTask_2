@@ -1,0 +1,39 @@
+@media screen and (max-width: 800px) {
+	.works__item {
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 615px) {
+	.works__item {
+		width: 49%;
+	}
+
+	.menu__list {
+		flex-wrap: wrap;
+	}
+
+	.menu__item {
+		flex-basis: 25%;
+	}
+}
+
+
+@media screen and (max-width: 430px) {
+	.gallery__list {
+		flex-wrap: wrap;
+	}
+
+	.gallery__item {
+		flex-basis: 50%;
+		border-bottom: 1px solid #fefefe;
+	}
+
+	.slider__dots-list {
+		bottom: 5%;
+	}
+
+	.footer__list {
+		justify-content: space-between;
+	}
+}

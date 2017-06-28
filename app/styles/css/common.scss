@@ -1,0 +1,48 @@
+/* общие стили доп.сброс */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html, body, ul, p {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5 h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* общие стили элементы страницы*/
+body {
+    font-family: RobotoRegular;
+    font-size: 12px;
+    line-height: 1.42;
+    color: #444444;
+    -webkit-font-smoothing: antialiased;
+}

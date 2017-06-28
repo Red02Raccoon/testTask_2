@@ -1,0 +1,56 @@
+@mixin fontFamily($familyName, $nameFolder) {
+  @font-face {
+    font-family: "#{$familyName}";
+    src: url("../fonts/" + $nameFolder + "/" + $familyName + ".eot");
+    src: url("../fonts/" + $nameFolder + "/" + $familyName + ".eot?#iefix") format("embedded-opentype"), 
+         url("../fonts/" + $nameFolder + "/" + $familyName + ".woff") format("woff"), 
+         url("../fonts/" + $nameFolder + "/" + $familyName + ".svg#" + $familyName) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin br($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+@mixin bg($wayBg) {
+	background-image: url("#{$wayBg}");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin triang($width, $height, $bg, $direction){
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	@if ($direction == t) {
+			border-width: 0 $width + px $height + px $width + px;
+			border-color: transparent transparent $bg transparent
+	}
+	@if ($direction == r){
+			border-width: $height + px 0 $height + px $width + px;
+			border-color: transparent transparent transparent $bg;
+	}
+	@if ($direction == b){
+			border-width: $height + px $width + px 0 $width + px;
+			border-color: $bg transparent transparent transparent;
+	}
+	@if ($direction == l) {
+			border-width: $height + px $width + px $height + px 0;
+			border-color: transparent $bg transparent transparent;
+	}
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
